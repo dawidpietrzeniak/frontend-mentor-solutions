@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--Charcoal-Grey);
+    font-family: 'Roboto', sans-serif;
+}
+
+.mobile-top {
+    display: none;
+    width: 100%;
+}
+.mobile-top img {
+    width: 100%;
+}
+
+.sign-up-form {
+    display: flex;
+    align-items: center;
+    background-color: var(--White);
+    border-radius: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 30px;
+    box-shadow: 0 0 30px 10px var(--Dark-Slate-Grey);
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.left h1 {
+    margin: 0;
+    font-size: 55px;
+    color: var(--Dark-Slate-Grey);
+}
+.left p {
+    color: var(--Dark-Slate-Grey);
+    margin-top: 15px;
+}
+.left button {
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 10px;
+    color: var(--White);
+    background-color: var(--Dark-Slate-Grey);
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: background ease-in-out 150ms;
+}
+.left button:hover {
+    cursor: pointer;
+    background-color: var(--Tomato);
+}
+.left label {
+    margin-top: 25px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--Dark-Slate-Grey);
+}
+.left input {
+    width: 100%;
+    padding: 20px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--Grey);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin: 10px 0;
+    box-sizing: border-box;
+    outline: none;
+    color: var(--Dark-Slate-Grey);
+}
+.left input::placeholder {
+    color: var(--Grey);
+}
+.left input:focus {
+    border-color: var(--Dark-Slate-Grey);
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+}
+li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--Dark-Slate-Grey);
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+}
+
+#error {
+    display: none;
+    margin: 0;
+    margin-top: 25px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--Tomato);
+}
+
+.success-message {
+    display: none;
+    width: 500px;
+    height: 500px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--White);
+    border-radius: 30px;
+    padding: 60px;
+    box-sizing: border-box;
+    box-shadow: 0 0 30px 10px var(--Dark-Slate-Grey);
+}
+.success-message img {
+    margin-bottom: 20px;
+}
+.success-message h1 {
+    color: var(--Dark-Slate-Grey);
+    font-weight: 700;
+    font-size: 50px;
+    margin: 20px 0;
+    line-height: 50px;
+}
+.success-message p {
+    color: var(--Dark-Slate-Grey);
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 400;
+    line-height: 23px;
+}
+.success-message button {
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 10px;
+    color: var(--White);
+    background-color: var(--Dark-Slate-Grey);
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.success-message button:hover {
+    cursor: pointer;
+    background-color: var(--Tomato);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media all and (max-width: 500px) {
+    body {
+        justify-content: flex-start;
+        background-color: var(--White);
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left h1 {
+        font-size: 40px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .sign-up-form {
+        flex-direction: column;
+        border-radius: 0px;
+        padding: 0px;
+        box-shadow: none;
+    }
+
+    .mobile-top {
+        display: flex;
+    }
+
+    .success-message {
+        width: auto;
+        box-shadow: none;
+        margin-top: 100px;
+    }
+}
