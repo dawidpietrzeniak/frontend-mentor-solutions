@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+
+  <img src="./images/logo.svg" alt="#">
+
+  <div class="card">
+    <div class="left-section">
+      <div class="bill-group">
+        <label for="bill">Bill</label><br>
+        <input id="bill" type="number" placeholder="0">
+      </div>
+
+      <div class="select-tip">
+        <label for="">Select Tip %</label><br>
+        <div class="buttons-container">
+          <button id="btn">5</button>
+          <button id="btn">10</button>
+          <button id="btn">15</button>
+          <button id="btn">25</button>
+          <button id="btn">50</button>
+          <input id="customTip" type="number" placeholder="Custom" onfocusout="calculatingCustomTip()">
+        </div>
+      </div>
+
+      <div class="number-of-people">
+        <div class="text-group">
+          <label>Number of People</label>
+          <label id="error">Can't be zero</label>
+        </div>
+        <input id="numberOfPeople" type="number" placeholder="0">
+      </div>
+    </div>
+
+    <div class="right-section">
+      <div class="top-section">
+        <div class="tip-amount">
+          <div class="tip-container">
+            <p>Tip Amount</p>
+            <p>/ person</p>
+          </div>
+  
+          <p id="tipAmount">$0.00</p>
+        </div>
+  
+        <div class="total">
+          <div class="total-container">
+            <p>Total</p>
+            <p>/ person</p>
+          </div>
+  
+          <p id="totalPrice">$0.00</p>
+        </div>
+      </div>
+
+      <button id="resetButton">Reset</button>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/dawidpietrzeniak" target="_blank">Dejvidek</a>.
+  </div>
+
+  <script src="script.js "></script>
+</body>
+</html>
